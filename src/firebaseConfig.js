@@ -9,8 +9,10 @@
 // ---------------------------------------------------------
 
 // Import Firebase SDK modules (using Firebase v9 modular syntax)
+import { getFirestore } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+
 
 // ---------------------------------------------------------
 // Read Firebase configuration from Vite environment variables.
@@ -42,3 +44,4 @@ const app = initializeApp(firebaseConfig);
 // or signout operations (that's why we export it).
 // ---------------------------------------------------------
 export const auth = getAuth(app);
+export const db = getFirestore(app);
